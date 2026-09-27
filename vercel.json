@@ -2,13 +2,10 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "buildCommand": "npm run vercel-build",
-  "redirects": [
+  "crons": [
     {
-      "source": "/:ruta*",
-      "has": [{ "type": "host", "value": "www.arriagayabogados.com" }],
-      "destination": "https://arriagayabogados.com/:ruta*",
-      "permanent": true
+      "path": "/api/cron/limpiar-prospectos",
+      "schedule": "0 9 * * *"
     }
-  ],
-  "crons": [{ "path": "/api/cron/limpiar-prospectos", "schedule": "0 9 * * *" }]
+  ]
 }

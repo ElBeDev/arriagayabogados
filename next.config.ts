@@ -21,6 +21,18 @@ const csp = [
 
 const nextConfig: NextConfig = {
   experimental: { optimizePackageImports: ["@phosphor-icons/react"] },
+  // www → dominio principal para TODO (páginas y archivos). Si solo se redirigieran los archivos,
+  // la página en www los pediría a otro origen y la CSP ('self') los bloquearía.
+  async redirects() {
+    return [
+      {
+        source: "/:ruta*",
+        has: [{ type: "host", value: "www.arriagayabogados.com" }],
+        destination: "https://arriagayabogados.com/:ruta*",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [{ protocol: "https", hostname: "*.public.blob.vercel-storage.com" }],
   },
