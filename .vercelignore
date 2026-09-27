@@ -1,0 +1,7 @@
+# Nunca subir secretos ni archivos locales si se despliega con el CLI
+.env*
+!.env.example
+.agents
+.claude
+docs/referencia
+public/subidas
