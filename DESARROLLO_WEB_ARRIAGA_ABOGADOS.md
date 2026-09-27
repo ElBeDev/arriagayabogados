@@ -8,7 +8,7 @@
 
 | | |
 |---|---|
-| **Sitio en línea** | https://arriagayabogados.vercel.app · dominio `arriagayabogados.com` en proceso (DNS en Hostinger, ver [Despliegue](#-despliegue-y-operación)) |
+| **Sitio en línea** | **https://arriagayabogados.com** (HTTPS activo; `www` redirige al dominio principal) · también en https://arriagayabogados.vercel.app |
 | **Panel** | `/admin` (usuario `admin`; contraseña en las variables de entorno de Vercel) |
 | **Repositorio** | https://github.com/ElBeDev/arriagayabogados (cada push a `main` publica) |
 | **Idiomas** | Español (`/`) e inglés (`/en`) completos |
@@ -17,11 +17,10 @@
 **Terminado:** marca y logo, diseño, 16 páginas en dos idiomas, panel de administración, base de datos, formulario con asignación automática, SEO técnico, seguridad, pruebas de punta a punta y publicación en Vercel.
 
 **Pendiente:**
-1. Que Hostinger publique los registros DNS nuevos (ya guardados en el panel).
-2. Cuentas y llaves reales: Resend (correo), Google Analytics 4, Cloudflare Turnstile y Cal.com.
-3. Contenido real del cliente: equipo, cédulas, fotos, cifras, testimonios autorizados y datos de contacto.
-4. Revisión del inglés por un socio bilingüe y validación de los textos legales por la firma.
-5. Google Search Console y Google Business Profile.
+1. Cuentas y llaves reales: Resend (correo), Google Analytics 4, Cloudflare Turnstile y Cal.com.
+2. Contenido real del cliente: equipo, cédulas, fotos, cifras, testimonios autorizados y datos de contacto.
+3. Revisión del inglés por un socio bilingüe y validación de los textos legales por la firma.
+4. Google Search Console y Google Business Profile.
 
 ---
 
@@ -534,7 +533,7 @@ Verificado sin desbordamiento horizontal en todas las rutas a 390px de ancho.
 | **Base de datos** | Neon Postgres `arriaga-db` (región iad1, plan gratuito), conectada vía integración de Vercel |
 | **Imágenes** | Vercel Blob `arriaga-imagenes` (público) |
 | **Cron** | `/api/cron/limpiar-prospectos` todos los días a las 9:00 UTC |
-| **Dominio** | `arriagayabogados.com` (Hostinger); `www` redirige al dominio principal |
+| **Dominio** | `arriagayabogados.com` (Hostinger) ✅ activo con HTTPS; `www` redirige al dominio principal (regla en `next.config.ts`) |
 
 ### Flujo de trabajo
 1. Cambios en el código → `git push` a `main` → Vercel aplica migraciones, compila y publica (unos 35 s).
@@ -554,7 +553,7 @@ Verificado sin desbordamiento horizontal en todas las rutas a 390px de ancho.
 | A | `@` | `216.198.79.1` |
 | CNAME | `www` | `27c812ae6063f9bd.vercel-dns-017.com` |
 
-Son los registros que Vercel recomienda. Los anteriores (`76.76.21.21` y `cname.vercel-dns.com`) siguen funcionando para el público, pero la red de la oficina de desarrollo no alcanza la IP antigua. **Estado:** guardados en el panel de Hostinger; en espera de que sus servidores los publiquen. Resend pedirá además registros SPF, DKIM y DMARC.
+Son los registros que Vercel recomienda. Los anteriores (`76.76.21.21` y `cname.vercel-dns.com`) siguen funcionando para el público, pero la red de la oficina de desarrollo no alcanza la IP antigua. **Estado:** ✅ publicados y verificados. Resend pedirá además registros SPF, DKIM y DMARC.
 
 ### Verificación hecha en producción
 - Formulario → prospecto guardado y asignado al socio del área.
@@ -607,7 +606,7 @@ Son los registros que Vercel recomienda. Los anteriores (`76.76.21.21` y `cname.
 - [x] Auditoría de accesibilidad, diseño y Lighthouse
 - [x] Pruebas de punta a punta en local y en producción
 - [x] Publicación en Vercel con Neon y Blob
-- [ ] DNS de `arriagayabogados.com` activo con HTTPS (en espera de Hostinger)
+- [x] DNS de `arriagayabogados.com` activo con HTTPS
 - [ ] Pruebas en Safari, Firefox, iOS y Android reales
 - [ ] Revisión final de textos por el cliente
 - [ ] Correo de Resend con SPF, DKIM y DMARC
@@ -665,4 +664,4 @@ Son los registros que Vercel recomienda. Los anteriores (`76.76.21.21` y `cname.
 | 2026-09-27 | **Publicado en Vercel** (proyecto `arriagayabogados`, equipo de elbedev): repo `github.com/ElBeDev/arriagayabogados` conectado (cada push a `main` despliega), Neon Postgres (`arriaga-db`, iad1, plan gratuito) con tablas y contenido de ejemplo, Blob (`arriaga-imagenes`), variables de producción cargadas, preset Next.js y migraciones automáticas en `vercel.json`. En línea en `arriagayabogados.vercel.app`; prueba de punta a punta en producción superada. Dominio `arriagayabogados.com` y `www` agregados; **falta el DNS en Hostinger** (A `@` → 76.76.21.21, CNAME `www` → cname.vercel-dns.com). `www` redirige al dominio principal |
 | 2026-09-27 | **DNS actualizado a los registros nuevos de Vercel** en Hostinger (A `@` → `216.198.79.1`, CNAME `www` → `27c812ae6063f9bd.vercel-dns-017.com`). El dominio ya respondía con HTTPS desde el exterior con los registros anteriores; el cambio es para que funcione también desde redes que no alcanzan la IP antigua |
 | 2026-09-27 | **Brief reescrito con el estado real:** estado actual, home y componentes tal como están construidos, stack con versiones, SEO/seguridad/analítica separados en implementado y pendiente, sección nueva de despliegue y operación, plan y pendientes al día |
-
+| 2026-09-27 | **Dominio activo:** `arriagayabogados.com` con HTTPS. Se corrigió la redirección de `www`: la regla de `vercel.json` solo alcanzaba los archivos y la página en `www` quedaba sin estilos (la CSP bloqueaba sus CSS, JS e imágenes). Ahora la redirección está en `next.config.ts` y cubre todo; verificado con 0 errores en el navegador |
