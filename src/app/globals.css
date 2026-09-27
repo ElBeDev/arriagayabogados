@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Tokens de la identidad "Nogal y cantera". Los valores viven en variables CSS (ver :root abajo). */
+@theme inline {
+  --color-nogal: var(--nogal);
+  --color-nogal-hover: var(--nogal-hover);
+  --color-tinta: var(--tinta);
+  --color-crema: var(--crema);
+  --color-crema-claro: var(--crema-claro);
+  --color-crema-suave: var(--crema-suave);
+  --color-linea: var(--linea);
+  --color-fantasma: var(--fantasma);
+  --color-revelado: var(--revelado);
+  --color-piedra: var(--piedra);
+  --color-arena: var(--arena);
+  --color-laton: var(--laton);
+  --color-error: var(--error);
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+
+}
+
+/* Tema único: claro (crema). El sitio no cambia con el modo oscuro del sistema. */
+:root {
+  color-scheme: light;
+  --nogal: #412f0c;
+  --nogal-hover: #2e2108;
+  --tinta: #1e1304;
+  --crema: #f8f4eb;
+  --crema-claro: #fcf8f1;
+  --crema-suave: #c9bfa8;
+  --linea: #e8e4db;
+  --fantasma: #e8e4d9;
+  --revelado: #8c877e; /* 3.2:1 sobre crema: el texto aún no revelado sigue siendo legible */
+  --piedra: #6b665f;
+  --arena: #8d8269;
+  --laton: #a3895b;
+  --error: #b3261e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-crema);
+  color: var(--color-tinta);
+}
+
+::selection {
+  background: var(--color-nogal);
+  color: var(--color-crema);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-nogal);
+  outline-offset: 2px;
+}
+
+.bg-nogal :focus-visible,
+.sobre-oscuro :focus-visible {
+  outline-color: var(--color-crema);
+}
+
+@utility contenedor {
+  width: 100%;
+  max-width: 1360px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  @media (width >= 48rem) {
+    padding-inline: 40px;
+  }
+  @media (width >= 80rem) {
+    padding-inline: 80px;
+  }
+}
+
+@utility seccion {
+  padding-block: 72px;
+  @media (width >= 64rem) {
+    padding-block: 120px;
+  }
+}
+
+/* Barras de scroll ocultas en los carruseles (siguen siendo desplazables). */
+@utility sin-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Entrada del hero en CSS puro: se ve desde el primer pintado, sin esperar JavaScript. */
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@utility entrada {
+  animation: entrada 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .entrada {
+    animation: none;
+  }
+}

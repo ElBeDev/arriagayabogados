@@ -1,0 +1,44 @@
+{
+  "name": "arriaga-abogados-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:generar": "drizzle-kit generate",
+    "db:migrar": "drizzle-kit migrate",
+    "db:semilla": "node --env-file=.env.local scripts/semilla.ts",
+    "vercel-build": "node scripts/migrar.mjs && next build"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "@vercel/blob": "^2.8.0",
+    "drizzle-orm": "^0.45.3",
+    "marked": "^18.0.14",
+    "motion": "^13.4.4",
+    "next": "16.3.6",
+    "next-intl": "^4.14.7",
+    "postgres": "^3.4.9",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "playwright": "^1.63.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
