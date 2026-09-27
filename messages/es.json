@@ -34,7 +34,11 @@
     "avisoLegal": "Aviso legal",
     "cookies": "Preferencias de cookies"
   },
-  "movil": { "llamar": "Llamar", "whatsapp": "WhatsApp", "mensajeWhatsapp": "Hola, me interesa agendar una consulta." },
+  "movil": {
+    "llamar": "Llamar",
+    "whatsapp": "WhatsApp",
+    "mensajeWhatsapp": "Hola, me interesa agendar una consulta."
+  },
   "comun": {
     "inicio": "Inicio",
     "ruta": "Ruta de navegación",
@@ -178,7 +182,6 @@
     "idiomas": "Idiomas",
     "cedula": "Cédula profesional",
     "verificar": "Verificar en el RNP",
-    "porConfirmar": "Por confirmar",
     "correo": "Correo",
     "publicacionesDe": "Publicaciones de {nombre}"
   },
@@ -219,15 +222,23 @@
     "enviaCv": "Envía tu CV",
     "asunto": "Carreras",
     "programas": [
-      { "titulo": "Programa de pasantes", "texto": "Para estudiantes de los últimos semestres de Derecho. Rotación por áreas, acompañamiento de un asociado y participación real en asuntos." },
-      { "titulo": "Asociados", "texto": "Buscamos abogados con 2 a 6 años de experiencia, rigor técnico y buena comunicación con clientes." },
-      { "titulo": "Personal de apoyo", "texto": "Asistentes legales, gestores y administración. Personas organizadas que disfruten de un entorno exigente y colaborativo." }
+      {
+        "titulo": "Programa de pasantes",
+        "texto": "Para estudiantes de los últimos semestres de Derecho. Rotación por áreas, acompañamiento de un asociado y participación real en asuntos."
+      },
+      {
+        "titulo": "Asociados",
+        "texto": "Buscamos abogados con 2 a 6 años de experiencia, rigor técnico y buena comunicación con clientes."
+      },
+      {
+        "titulo": "Personal de apoyo",
+        "texto": "Asistentes legales, gestores y administración. Personas organizadas que disfruten de un entorno exigente y colaborativo."
+      }
     ]
   },
   "legal": {
     "eyebrow": "Legal",
     "actualizacion": "Última actualización: {fecha}",
-    "provisional": "Texto provisional. El contenido definitivo lo redacta y valida la firma antes de publicar el sitio.",
     "privacidad": "Aviso de Privacidad",
     "terminos": "Términos de uso",
     "avisoLegal": "Aviso legal"

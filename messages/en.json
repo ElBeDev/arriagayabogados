@@ -34,7 +34,11 @@
     "avisoLegal": "Legal notice",
     "cookies": "Cookie preferences"
   },
-  "movil": { "llamar": "Call", "whatsapp": "WhatsApp", "mensajeWhatsapp": "Hello, I would like to book a consultation." },
+  "movil": {
+    "llamar": "Call",
+    "whatsapp": "WhatsApp",
+    "mensajeWhatsapp": "Hello, I would like to book a consultation."
+  },
   "comun": {
     "inicio": "Home",
     "ruta": "Breadcrumb",
@@ -178,7 +182,6 @@
     "idiomas": "Languages",
     "cedula": "Professional license",
     "verificar": "Verify in the RNP",
-    "porConfirmar": "To be confirmed",
     "correo": "Email",
     "publicacionesDe": "Insights by {nombre}"
   },
@@ -219,15 +222,23 @@
     "enviaCv": "Send your CV",
     "asunto": "Careers",
     "programas": [
-      { "titulo": "Trainee program", "texto": "For law students in their final semesters. Rotation across areas, guidance from an associate and real involvement in matters." },
-      { "titulo": "Associates", "texto": "We look for lawyers with 2 to 6 years of experience, technical rigor and strong client communication." },
-      { "titulo": "Support staff", "texto": "Legal assistants, case managers and administration. Organized people who enjoy a demanding, collaborative environment." }
+      {
+        "titulo": "Trainee program",
+        "texto": "For law students in their final semesters. Rotation across areas, guidance from an associate and real involvement in matters."
+      },
+      {
+        "titulo": "Associates",
+        "texto": "We look for lawyers with 2 to 6 years of experience, technical rigor and strong client communication."
+      },
+      {
+        "titulo": "Support staff",
+        "texto": "Legal assistants, case managers and administration. Organized people who enjoy a demanding, collaborative environment."
+      }
     ]
   },
   "legal": {
     "eyebrow": "Legal",
     "actualizacion": "Last updated: {fecha}",
-    "provisional": "Draft text. The final version is written and approved by the firm before the site goes live.",
     "privacidad": "Privacy Notice",
     "terminos": "Terms of use",
     "avisoLegal": "Legal notice"

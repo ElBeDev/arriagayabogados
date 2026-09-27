@@ -14,9 +14,6 @@ export async function PaginaLegal({ titulo, actualizacion, children }: { titulo:
       />
       <section className="contenedor pb-18 lg:pb-30">
         <div className="border-t border-linea pt-12">
-          <p className="mb-10 max-w-[72ch] border-l-2 border-laton bg-crema-claro p-4 text-[14px] leading-relaxed text-piedra">
-            {t("provisional")}
-          </p>
           <Prosa>{children}</Prosa>
         </div>
       </section>

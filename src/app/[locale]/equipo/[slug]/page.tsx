@@ -112,18 +112,14 @@ export default async function Perfil(props: PageProps<"/[locale]/equipo/[slug]">
                 </ul>
               </Dato>
               <Dato titulo={t("idiomas")}>{p.idiomas.join(", ")}</Dato>
-              <Dato titulo={t("cedula")}>
-                {p.cedula ? (
-                  <>
-                    {p.cedula}.{" "}
-                    <a href={RNP_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
-                      {t("verificar")}
-                    </a>
-                  </>
-                ) : (
-                  <span className="text-piedra">{t("porConfirmar")}</span>
-                )}
-              </Dato>
+              {p.cedula && (
+                <Dato titulo={t("cedula")}>
+                  {p.cedula}.{" "}
+                  <a href={RNP_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
+                    {t("verificar")}
+                  </a>
+                </Dato>
+              )}
               <Dato titulo={t("correo")}>
                 <a href={`mailto:${p.email}`} className="inline-flex items-center gap-2 hover:underline">
                   <EnvelopeSimple aria-hidden size={16} /> {p.email}
