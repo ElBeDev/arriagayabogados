@@ -10,7 +10,8 @@
     "db:generar": "drizzle-kit generate",
     "db:migrar": "drizzle-kit migrate",
     "db:semilla": "node --env-file=.env.local scripts/semilla.ts",
-    "vercel-build": "node scripts/migrar.mjs && next build"
+    "vercel-build": "node scripts/migrar.mjs && next build",
+    "logos": "node scripts/generar-logos.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

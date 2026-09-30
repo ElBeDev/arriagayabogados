@@ -71,4 +71,4 @@ formulario por IP, campo trampa contra bots y Turnstile opcional.
 ## Imágenes
 
 Las fotos actuales son de stock provisionales (licencias en `public/img/CREDITS.md`) y se reemplazan con la sesión
-de fotos real. Los archivos de marca (logo, sello, íconos) están en `public/marca/` y la guía en `/marca`.
+de fotos real. Los logos maestros están en `public/marca/`. El kit descargable para el equipo vive en `/logos` (archivos en `public/logos/`); si cambia el logo, se regenera con `npm run logos`.

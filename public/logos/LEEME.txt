@@ -1,0 +1,40 @@
+ARRIAGA & ABOGADOS · KIT DE LOGOS
+=================================
+
+Carpetas
+  horizontal/      Logo completo en una línea (isotipo + nombre). Uso principal: web, correo, documentos.
+  vertical/        Logo completo apilado, con "FIRMA LEGAL · GUADALAJARA". Portadas y papelería.
+  isotipo/         Solo el símbolo A&. Espacios reducidos, marca de agua, redes.
+  logotipo/        Solo las letras "Arriaga & Abogados".
+  sello/           Sello circular institucional. Documentos y constancias.
+  iconos/          Símbolo sobre fondo café, cuadrado: foto de perfil, WhatsApp, favicon.
+  redes-y-correo/  Imagen para compartir en redes (1200x630) y logo para firma de correo.
+
+Versiones de cada logo
+  color          Sobre fondos claros (crema o blanco).
+  fondo-oscuro   Sobre café, negro o fotos oscuras.
+  negro          Una sola tinta negra: grabados, sellos de goma, fax, impresión a una tinta.
+  blanco         Una sola tinta blanca: sobre fotos o colores oscuros.
+
+Formatos
+  SVG  Vectorial: se escala sin perder calidad. Para imprenta, diseño y web.
+  PNG  Fondo transparente, alta resolución. Para Word, PowerPoint, redes y correo.
+
+Colores
+  Café Nogal   #412F0C   RGB 65 47 12
+  Espresso     #1E1304   RGB 30 19 4
+  Latón        #A3895B   RGB 163 137 91
+  Oro Claro    #D4B98A   RGB 212 185 138
+  Crema        #F8F4EB   RGB 248 244 235
+
+Tipografías (gratuitas, Google Fonts)
+  DM Sans                   Textos, títulos y el nombre.  https://fonts.google.com/specimen/DM+Sans
+  Instrument Serif Italic   Solo el "&" del logo.        https://fonts.google.com/specimen/Instrument+Serif
+
+Reglas
+  - Deja alrededor del logo un espacio libre igual a la altura del "&".
+  - Tamaño mínimo: logo horizontal 120 px (30 mm impreso); isotipo 16 px.
+  - No estirar, rotar, cambiar colores ni separar la A del "&".
+  - Sobre fotos, usar la versión blanca o fondo-oscuro, o poner el logo sobre una franja café.
+
+Versión en línea: https://arriagayabogados.com/logos

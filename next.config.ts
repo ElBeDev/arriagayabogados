@@ -31,6 +31,9 @@ const nextConfig: NextConfig = {
         destination: "https://arriagayabogados.com/:ruta*",
         permanent: true,
       },
+      // La guía de marca anterior ahora vive en /logos (kit de descargas).
+      { source: "/marca", destination: "/logos", permanent: true },
+      { source: "/en/marca", destination: "/en/logos", permanent: true },
     ];
   },
   images: {

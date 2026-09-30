@@ -213,7 +213,7 @@ Las 9 áreas viven en código (`src/content/areas.ts` y `areas.en.ts`) porque su
 /aviso-de-privacidad               Aviso de Privacidad integral (LFPDPPP)
 /terminos                          Términos de uso
 /aviso-legal                       La información no constituye asesoría legal
-/marca                             Guía de marca (no indexada)
+/logos                             Kit de logos para el equipo: todas las versiones en SVG/PNG, ZIP, colores y tipografías (no indexada; /marca redirige aquí)
 /agendar                           Redirige a /contacto#agenda
 /en/...                            Versión en inglés de todo lo anterior
 /admin                             Panel (resumen, prospectos, publicaciones, testimonios, equipo, configuración)
@@ -323,7 +323,7 @@ El isotipo **A&** une la **A** de Arriaga (DM Sans Bold) con el **&** de "& Abog
 
 - **Colores:** A en espresso y & en latón sobre claro; A en crema y & en oro claro sobre café.
 - **Archivos:** `public/marca/` (SVG en trazos y PNG, versión normal y "-crema"), favicon `src/app/icon.svg`, `apple-icon.png`, imagen para redes 1200×630. Componentes React en `src/components/marca.tsx`.
-- **Guía de marca:** `/marca` (logos, paleta, tipografía, reglas y descargas).
+- **Kit de logos:** `/logos` (https://arriagayabogados.com/logos). Cada pieza (horizontal, vertical, isotipo, logotipo y sello) en 4 versiones (color, fondo oscuro, negro y blanco), en SVG y PNG transparente; íconos 1080/512/180 px, imagen para redes, logo para firma de correo, colores con botón de copiar, tipografías, reglas y **ZIP con todo** (incluye `LEEME.txt`). Los archivos están en `public/logos/` y se regeneran con `npm run logos` a partir de los maestros de `public/marca/`.
 
 ### Reglas de diseño (skill design-taste-frontend)
 - Encabezados de sección **apilados** (etiqueta opcional, título, texto de 65 caracteres máximo y botón), sin párrafo flotando a la derecha.
@@ -574,7 +574,7 @@ Son los registros que Vercel recomienda. Los anteriores (`76.76.21.21` y `cname.
 - [ ] Análisis de 3 a 5 despachos competidores en Guadalajara
 
 ### Fase 1: Identidad y diseño
-- [x] Logo (isotipo A&, logotipo, versiones horizontal y vertical, sello) y guía de marca en `/marca`
+- [x] Logo (isotipo A&, logotipo, versiones horizontal y vertical, sello) y kit de logos descargable en `/logos`
 - [x] Diseño de la home y páginas interiores (escritorio y móvil)
 - [x] Rediseño con la skill design-taste-frontend (modo Preservar)
 - [ ] Sesión de fotos del equipo y de la oficina
@@ -584,7 +584,7 @@ Son los registros que Vercel recomienda. Los anteriores (`76.76.21.21` y `cname.
 - [x] Repo: Next.js, Tailwind, next-intl, Drizzle
 - [x] Sistema de diseño y componentes
 - [x] Header con mega-menú, footer, menú móvil y barra de llamada/WhatsApp
-- [x] Páginas: Home, La Firma, Áreas, Equipo, Publicaciones, Contacto, Carreras, legales, marca y 404
+- [x] Páginas: Home, La Firma, Áreas, Equipo, Publicaciones, Contacto, Carreras, legales, logos y 404
 
 ### Fase 3: Panel y funcionalidad
 - [x] Autenticación del panel con roles
@@ -665,3 +665,4 @@ Son los registros que Vercel recomienda. Los anteriores (`76.76.21.21` y `cname.
 | 2026-09-27 | **DNS actualizado a los registros nuevos de Vercel** en Hostinger (A `@` → `216.198.79.1`, CNAME `www` → `27c812ae6063f9bd.vercel-dns-017.com`). El dominio ya respondía con HTTPS desde el exterior con los registros anteriores; el cambio es para que funcione también desde redes que no alcanzan la IP antigua |
 | 2026-09-27 | **Brief reescrito con el estado real:** estado actual, home y componentes tal como están construidos, stack con versiones, SEO/seguridad/analítica separados en implementado y pendiente, sección nueva de despliegue y operación, plan y pendientes al día |
 | 2026-09-27 | **Dominio activo:** `arriagayabogados.com` con HTTPS. Se corrigió la redirección de `www`: la regla de `vercel.json` solo alcanzaba los archivos y la página en `www` quedaba sin estilos (la CSP bloqueaba sus CSS, JS e imágenes). Ahora la redirección está en `next.config.ts` y cubre todo; verificado con 0 errores en el navegador |
+| 2026-09-30 | **Kit de logos en `/logos`** para el equipo: 5 piezas × 4 versiones (color, fondo oscuro, negro, blanco) en SVG y PNG, íconos, imagen para redes, firma de correo, colores copiables, tipografías, reglas y ZIP con todo. Generado con `npm run logos` (`scripts/generar-logos.mjs`). `/marca` redirige a `/logos` |
