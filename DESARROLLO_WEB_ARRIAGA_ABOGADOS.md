@@ -106,7 +106,7 @@ Trato directo con socios · Visión integral · Comunicación clara · Raíz loc
 
 ### Datos de contacto (provisionales, editables en `/admin/configuracion`)
 - **Dirección:** Av. Pablo Neruda 2890, Piso 9, Col. Providencia 4a. Sección, C.P. 44639, Guadalajara, Jalisco
-- **Teléfono:** (33) 0000 0000 · **WhatsApp:** 52 33 0000 0000
+- **Teléfono y WhatsApp:** ✅ **+52 33 2101 7551** (real)
 - **Correo:** contacto@arriagayabogados.com
 - **Horario:** Lunes a viernes 9:00 a 19:00 h · Sábados 10:00 a 14:00 h (con cita)
 - **Por confirmar con el cliente:** si ofrecen atención urgente 24/7 (penal / detenciones)
@@ -637,7 +637,8 @@ Son los registros que Vercel recomienda. Los anteriores (`76.76.21.21` y `cname.
 - [ ] Lista del equipo real: nombre, cargo, áreas, formación, idiomas, **cédula profesional**, LinkedIn y correo
 - [ ] Fotografías profesionales (o agendar una sesión)
 - [ ] Áreas de práctica que realmente ofrecen (confirmar o ajustar las 9)
-- [ ] Dirección exacta, teléfonos, WhatsApp, horario y si ofrecen atención urgente 24/7
+- [x] Teléfono y WhatsApp: +52 33 2101 7551
+- [ ] Dirección exacta, correo, horario y si ofrecen atención urgente 24/7
 - [ ] Historia real y cifras reales (años, asuntos, clientes)
 - [ ] Testimonios autorizados por escrito (si los hay)
 - [ ] Si la primera consulta tiene costo y cuánto
@@ -666,3 +667,4 @@ Son los registros que Vercel recomienda. Los anteriores (`76.76.21.21` y `cname.
 | 2026-09-27 | **Brief reescrito con el estado real:** estado actual, home y componentes tal como están construidos, stack con versiones, SEO/seguridad/analítica separados en implementado y pendiente, sección nueva de despliegue y operación, plan y pendientes al día |
 | 2026-09-27 | **Dominio activo:** `arriagayabogados.com` con HTTPS. Se corrigió la redirección de `www`: la regla de `vercel.json` solo alcanzaba los archivos y la página en `www` quedaba sin estilos (la CSP bloqueaba sus CSS, JS e imágenes). Ahora la redirección está en `next.config.ts` y cubre todo; verificado con 0 errores en el navegador |
 | 2026-09-30 | **Kit de logos en `/logos`** para el equipo: 5 piezas × 4 versiones (color, fondo oscuro, negro, blanco) en SVG y PNG, íconos, imagen para redes, firma de correo, colores copiables, tipografías, reglas y ZIP con todo. Generado con `npm run logos` (`scripts/generar-logos.mjs`). `/marca` redirige a `/logos` |
+| 2026-09-30 | **Teléfono real** en todo el sitio: +52 33 2101 7551 (llamadas y WhatsApp), en la configuración de producción y local y como valor por defecto en `src/content/firma.ts` |

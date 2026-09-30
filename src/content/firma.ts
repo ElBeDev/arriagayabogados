@@ -33,9 +33,9 @@ export type Ajustes = {
 };
 
 export const ajustesPorDefecto: Ajustes = {
-  telefono: "(33) 0000 0000",
-  telefonoHref: "+523300000000",
-  whatsapp: "523300000000",
+  telefono: "+52 33 2101 7551",
+  telefonoHref: "+523321017551",
+  whatsapp: "523321017551",
   email: "contacto@arriagayabogados.com",
   calle: "Av. Pablo Neruda 2890, Piso 9",
   colonia: "Col. Providencia 4a. Sección",
